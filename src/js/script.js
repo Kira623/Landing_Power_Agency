@@ -1,23 +1,27 @@
-import Swiper from 'swiper';
+if (typeof Swiper === 'function') {
+	const swiperTwo = new Swiper('.swiper_2', {
+		slidesPerView: 5,
+		loop: true,
+	});
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-});
+	const swiperOne = new Swiper('.swiper_1', {
+		initialSlide: 2,
+		thumbs: {
+			swiper: swiperTwo,
+		},
+	});
+
+	const swiperThree = new Swiper('.swiper_3', {
+		slidesPerView: 5,
+		loop: true,
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: true,
+		},
+	});
+}
+// if (typeof Swiper !== 'undefined')
+
+if (document.querySelector('.block')) {
+	document.querySelector('.block').innerHTML = 'hello';
+}
