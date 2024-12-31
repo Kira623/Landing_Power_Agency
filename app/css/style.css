@@ -357,6 +357,7 @@ header {
 
 .hero_content {
   max-width: 73rem;
+  justify-content: center;
 }
 
 .hero_title {
@@ -524,11 +525,12 @@ header {
 
 .hero_employees {
   position: absolute;
-  display: flex;
+  content: "";
   top: 50rem;
-  right: 46rem;
+  right: 60rem;
   width: 3rem;
   height: 18rem;
+  justify-content: center;
 }
 
 .comments_w {
